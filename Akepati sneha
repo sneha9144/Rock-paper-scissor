@@ -1,0 +1,12 @@
+// async.js
+function fetchData(url) {
+return new Promise((resolve, reject) => { setTimeout(() => {
+resolve(`Data from ${url}`);
+}, 1000);
+});
+}
+async function displayData() {
+let data = await fetchData('https://api.example.com'); console.log(data); // Data from https://api.example.com
+}
+displayData();
+
